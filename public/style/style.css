@@ -401,7 +401,7 @@ padding: 0;
 .contact-form button {
     width: 170px;
     height: 30px;
-    background-color:#007BFF;
+    background-color:orangered;
     color: white;
     border: none;
     border-radius: 5px;
@@ -413,7 +413,7 @@ padding: 0;
 }
 
 .contact-form button:hover {
-    background-color:#0056b3;
+    background-color:#E62C27;
 
 }
 
@@ -520,6 +520,7 @@ background-color:#E62C27;
 
 .title {
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 25px 0;
     font-size: 2em;
     color: black;
@@ -553,7 +554,7 @@ background-color:#E62C27;
 }
 
 .product-container th {
-    background-color: #007BFF;
+    background-color: orangered;
     color: white;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -569,7 +570,7 @@ background-color:#E62C27;
 }
 
 .product-container td button {
-    background-color:#007BFF;
+    background-color:orangered;
     border: none;
     color: white;
     width: 130px;
@@ -584,7 +585,7 @@ background-color:#E62C27;
 }
 
 .product-container td button:hover {
-    background-color:#0056b3;
+    background-color:#E62C27;
 }
 
 .product-container td button a {
@@ -620,14 +621,14 @@ background-color:#E62C27;
 .btn-agregar{
     width: 170px;
     height: 30px;
-    background-color: #007BFF;
+    background-color: orangered;
     border-radius: 5px;
     border: none;
     margin-left: 150px;
     margin-top: 25px;
 }
 .btn-agregar:hover {
-    background-color: #0056b3;
+    background-color:#E62C27;
 }
 .btn-agregar a{
     color: white;
@@ -639,7 +640,7 @@ background-color:#E62C27;
 
 
 /*Agregar productoss*/
-/*FORMULARIO AGG PRODUCTOS*/
+
 h2 {
     text-align: center;
     margin: 20px 0;
@@ -683,12 +684,12 @@ input[type="number"] {
     font-size: 1em;
     width: 100%;
     box-sizing: border-box;
-    /* Asegura que el padding y el borde se incluyan en el ancho total */
+    
 }
 
 button[type="submit"] {
     
-    background-color: #007BFF;
+    background-color:orangered;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -702,13 +703,16 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color:#E62C27;
     
 }
+
+
+
 .agregarProductoBtn{
     width: 170px;
     height: 30px;
-    background-color:#007BFF;
+    background-color:orangered;
     border: none;
     border-radius: 5px;
     margin-left: 200px;
@@ -716,7 +720,7 @@ button[type="submit"]:hover {
     margin-bottom: 15px;
 }
 .agregarProductoBtn:hover {
-    background-color: #0056b3;
+    background-color:#E62C27;
 }
 
 
@@ -758,7 +762,26 @@ button[type="submit"]:hover {
     font-family: Arial, Helvetica, sans-serif;
 
 }
-
+.exito-title{
+    width: 1000px;
+    height: 800px;
+}
+.title-exito{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 470px;
+    margin-top: 150px;
+}
+.seguir-comprando{
+    background-color: orangered;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 15px;
+    margin-left: 600px;
+    margin-top: 25px;
+}
 .product{
     display: flex;
     align-items: center;
@@ -806,7 +829,7 @@ button[type="submit"]:hover {
 
 }
 .quantity-btn:hover{
-    background-color: #0056b3;
+    background-color: orangered;
 }
 
 .quantity-input{
