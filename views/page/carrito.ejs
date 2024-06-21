@@ -1,0 +1,35 @@
+<%- include('../partials/head')%>
+
+    <!-- products -->
+    <div class="container">
+        <div class="left">
+            <h2 class="titleCarrito">Mi carrito</h2>
+            <div class="product">
+                <img src="/images/<%= product.imagen %>" alt="">
+                <div class="produt-info">
+                    <h2>
+                        <%= product.nombre_producto %>
+                    </h2>
+                    <p>
+                        <%= product.descripcion %>
+                    </p>
+                    <button class="delete-btn"><link href= "/page/delete">Eliminar</link></button>
+                </div>
+
+                <div class="product-controls">
+                    <button class="quantity-btn">-</button>
+                    <input type="text" class="quantity-input" placeholder="1">
+                    <button class="quantity-btn">+</button>
+                    <span class="price"><strong>$<%= product.precio %></strong></span>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="total-container">
+                <p>Total: <strong>$<%= product.precio %></strong></p>
+               <a href="/exito"><button class="buy-btn">Comprar</button></a>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../partials/footer')%>

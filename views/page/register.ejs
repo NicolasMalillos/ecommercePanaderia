@@ -1,0 +1,23 @@
+<%- include('../partials/head')%>
+
+
+    <section class="register-section">
+
+        <h2>Registro</h2>
+        <form action="" class="register-form" method="post">
+            <label for="">Nombre de usuario:</label>
+            <input type="text" name="username">
+            <label for="">Email:</label>
+            <input type="email" name="email">
+            <label for="">Contraseña</label>
+            <input type="password" name="password">
+            <label for="">Confirmar contraseña:</label>
+            <input type="password" name="confirm-password">
+
+            <button>Registrar</button>
+
+            <p>¿Ya tienes cuenta? <a href="/login">Iniciar sesion</a></p>
+        </form>
+    </section>
+
+    <%- include('../partials/footer')%>
