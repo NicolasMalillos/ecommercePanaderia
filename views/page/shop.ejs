@@ -15,7 +15,11 @@
             <h2><%= product.nombre_producto %></h2>
             <p class="description"><%= product.descripcion %></p>
             <p class="price">Precio: <%= product.precio %></p>
-            <button class="btn-compra"><a href="/productos/carrito/<%= product.id %>">Comprar</a></button>
+
+            <form action="/cart/add" method="POST">
+                <input type="hidden" name="productId" value="<%= product._id %>">
+                <button type="submit">Añadir al Carrito</button>
+            </form>
         </div>
     <% }); %>
 </div>

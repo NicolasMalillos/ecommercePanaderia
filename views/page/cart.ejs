@@ -1,0 +1,43 @@
+<%- include('../partials/head')%>
+
+<!-- products -->
+
+
+
+<div class="container">
+    <div class="left">
+        <h2 class="titleCarrito">Mi carrito</h2>
+        <button class="BTN-shop2"><a href="/productos/shop">Volver</a></button>
+        <% if (cart && cart.length > 0) { %>
+            <% cart.forEach(item => { %>
+                <div class="product">
+                    <img src="/images/<%= item.imagen %>" alt="<%= item.nombre %>">
+                    <div class="product-info">
+                        <h2><%= item.nombre %></h2>
+                        <p>Precio: $<%= item.precio %></p>
+                        <p>Cantidad: <%= item.cantidad %></p>
+                        <form action="/cart/remove" method="POST">
+                            <input type="hidden" name="productId" value="<%= item.productId %>">
+                            <button type="submit">Eliminar</button>
+                        </form>
+                    </div>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <p>El carrito está vacío</p>
+        <% } %>
+    </div>
+    <div class="right">
+        <div class="total-container">
+            <p>Total: <strong>$<%= cart ? cart.reduce((acc, item) => acc + item.precio * item.cantidad, 0) : 0 %></strong></p>
+            <a href="/exito"><button class="buy-btn">Comprar</button></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<%- include('../partials/footer')%>

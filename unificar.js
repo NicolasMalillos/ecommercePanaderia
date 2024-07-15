@@ -1,14 +1,12 @@
 const connectDB = require('./config/connectDB'); //conexion a la base
-
 const Productos = require('./models/product'); //modelo de la coleccion 
-
 const productJson = require('./datos.json');
 
 
 
 require('dotenv').config(); 
 
-// //Funcion que activa la conexion 
+ //Funcion que activa la conexion 
 const iniciar = async () => {
     try {
         await connectDB(process.env.MONGO_URL) //URL de entorno 
@@ -21,7 +19,6 @@ const iniciar = async () => {
         console.log(error)
     }
 }
-
 iniciar(); 
 
 

@@ -5,20 +5,29 @@
         
         <h2>Iniciar sesión</h2>
         
-        <form action="" class="login-form" method="post">
-            <label for="">Nombre de usuario:</label>
-            <input type="text" name="username">
-           
+        <form action="/api/auth/login" class="login-form" method="post">
+            <label for="">Email:</label>
+            <input type="email" name="email" placeholder="Email" required>
+            
             <label for="">Contraseña</label>
-            <input type="password" name="password">
+            <input type="password" name="password" placeholder="Contraseña" required>
 
-            <button>Iniciar sesión</button>
+            <button type="submit">Iniciar sesión</button>
 
             <p>¿No tienes cuenta? <a href="/register">Registrate</a></p>
             
             <button class="BTN-Inicio"><a href="/">Volver</a></button>
         </form>
         
+        <!-- Área para mostrar notificaciones -->
+        <div id="notification" style="display: none;"></div>
+
+
     </section>
+    
+    
+
+
+
 
     <%- include('../partials/footer')%>

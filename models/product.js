@@ -12,7 +12,8 @@ const productosEsquema = new mongoose.Schema({
     categoria: String,
     oferta: Boolean,
     precio_oferta: Number,
-    precio: Number
+    precio: Number,
+    isFavorite: { type: Boolean, default: false }
 }); 
 //                                Coleccion
 const Productos = mongoose.model('Productos', productosEsquema)

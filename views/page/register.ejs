@@ -1,23 +1,64 @@
 <%- include('../partials/head')%>
 
 
+
     <section class="register-section">
 
         <h2>Registro</h2>
         <form action="" class="register-form" method="post">
             <label for="">Nombre de usuario:</label>
-            <input type="text" name="username">
+            <input type="text" name="username" placeholder="Nombre de usuario" required>
             <label for="">Email:</label>
-            <input type="email" name="email">
+            <input type="email" name="email" placeholder="Correo electronico" required>
             <label for="">Contraseña</label>
-            <input type="password" name="password">
+            <input type="password" name="password" placeholder="Contraseña" required>
             <label for="">Confirmar contraseña:</label>
-            <input type="password" name="confirm-password">
+            <input type="password" name="confirm-password" placeholder="Contraseña" required>
 
-            <button>Registrar</button>
+            <button type="submit">Registrar</button>
 
             <p>¿Ya tienes cuenta? <a href="/login">Iniciar sesion</a></p>
         </form>
+
+        
+
+
+        <!-- Área para mostrar notificaciones -->
+    <div id="notification" style="display: none;"></div>
+
+
     </section>
 
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $('#registerForm').submit(function(event) {
+                event.preventDefault(); // Prevenir el envío estándard del formulario
+
+                 // Validar que las contraseñas coincidan
+                 const password = $('#password').val();
+                const confirmPassword = $('#confirm-password').val();
+                if (password !== confirmPassword) {
+                    $('#notification').text('Las contraseñas no coinciden').show();
+                    return;
+                }
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/api/auth/register',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        alert('Usuario registrado con éxito');
+                        
+                    },
+                    error: function(xhr, status, error) {
+                        const errorMessage = xhr.responseJSON ? xhr.responseJSON.msg : 'Error en el servidor';
+                        $('#notification').text(errorMessage).show();
+                    }
+                });
+            });
+        });
+    </script>
     <%- include('../partials/footer')%>
